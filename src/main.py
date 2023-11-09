@@ -1,6 +1,9 @@
 # Создание экземпляра класса для работы с API сайтов с вакансиями
+from src.platform import HeadHunterAPI, SuperJobAPI
+
 hh_api = HeadHunterAPI()
-superjob_api = SuperJobAPI()
+superjob_api = SuperJobAPI(
+    'v3.r.137939262.2cdae9780058f951ba6d7ca739757cabfee656af.7222c5992af77f3e8f94ce21882bbd3026de8c8f')
 
 # Получение вакансий с разных платформ
 hh_vacancies = hh_api.get_vacancies("Python")
