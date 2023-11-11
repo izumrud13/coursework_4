@@ -12,7 +12,7 @@ class SuperJobAPI(API):
     __SJ_API_URL = 'https://api.superjob.ru/2.0/vacancies/'
     __SJ_API_KEY = 'v3.r.137939262.2cdae9780058f951ba6d7ca739757cabfee656af.7222c5992af77f3e8f94ce21882bbd3026de8c8f'
     param_default = {
-        'count': 1,
+        'count': 50,
         'town': 'Москва',
         'period': 7,
     }
@@ -31,7 +31,7 @@ class SuperJobAPI(API):
         if response.status_code == 200:
             return response.json()['objects']
         else:
-             return None
+            return None
 
     def add_profession(self, value: str) -> None:
         """
