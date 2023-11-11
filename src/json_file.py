@@ -1,5 +1,4 @@
 import json
-
 from src.job_search_service import Saver
 
 
